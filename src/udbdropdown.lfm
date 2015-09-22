@@ -1,0 +1,69 @@
+object fdbdropdown: Tfdbdropdown
+  Left = 377
+  Height = 240
+  Top = 178
+  Width = 320
+  BorderStyle = bsNone
+  Caption = 'fdbdropdown'
+  ClientHeight = 240
+  ClientWidth = 320
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  LCLVersion = '1.1'
+  object Edit1: TEdit
+    Left = 1
+    Height = 23
+    Top = 1
+    Width = 318
+    Align = alTop
+    AutoSize = False
+    BorderSpacing.Around = 1
+    BorderStyle = bsNone
+    OnChange = Edit1Change
+    OnEnter = Edit1Enter
+    OnKeyDown = Edit1KeyDown
+    TabOrder = 0
+  end
+  object FZPanel1: TFZPanel
+    Left = 1
+    Height = 214
+    Top = 25
+    Width = 318
+    HotTrack = False
+    HoverColor = clGray
+    FZBorder.Color = clBlack
+    FZBorder.HoverColor = clBlack
+    FZBorder.HotTrack = False
+    FZBorder.Width = 1
+    FZBorder.HoverWidth = 1
+    FZBorder.Visible = False
+    FZBorder.Option = [mboTop, mboLeft, mboBottom, mboRight]
+    Align = alClient
+    BorderSpacing.Around = 1
+    TabOrder = 1
+    object DBGrid1: TDBGrid
+      Left = 0
+      Height = 214
+      Top = 0
+      Width = 318
+      Align = alClient
+      BorderStyle = bsNone
+      Color = clWindow
+      Columns = <>
+      DataSource = Datasource1
+      FixedCols = 0
+      Options = [dgColumnResize, dgColumnMove, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns, dgDisableDelete, dgDisableInsert]
+      ReadOnly = True
+      TabOrder = 0
+      OnDblClick = DBGrid1DblClick
+      OnKeyDown = DBGrid1KeyDown
+    end
+  end
+  object Datasource1: TDatasource
+    left = 128
+    top = 76
+  end
+end
